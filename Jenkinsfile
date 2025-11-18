@@ -2,11 +2,11 @@
 
 def configMap = [
     project   : "roboshop",
-    component : "user"   // change per repo
+    component : "user"  // change here per component
 ]
 
 if (!env.BRANCH_NAME.equalsIgnoreCase('main')) {
-    nodejsEKSPipeline(configMap)  // calls the shared library pipeline
+    nodejsEKSPipeline(configMap)
 } else {
-    echo "Please proceed with the production process"
+    echo "Please proceed with production process"
 }
